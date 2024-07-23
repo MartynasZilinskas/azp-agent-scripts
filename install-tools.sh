@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # For debian-12
 
 # yq
