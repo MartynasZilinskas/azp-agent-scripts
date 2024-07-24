@@ -13,14 +13,14 @@ wget https://github.com/jqlang/jq/releases/download/jq-1.7.1/jq-linux-amd64 -O /
 sudo apt install git -y
 
 # docker
-# Add Docker's official GPG key:
+## Add Docker's official GPG key:
 sudo apt-get update
 sudo apt-get install ca-certificates curl
 sudo install -m 0755 -d /etc/apt/keyrings
 sudo curl -fsSL https://download.docker.com/linux/debian/gpg -o /etc/apt/keyrings/docker.asc
 sudo chmod a+r /etc/apt/keyrings/docker.asc
 
-# Add the repository to Apt sources:
+## Add the repository to Apt sources:
 echo \
   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/debian \
   $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
@@ -31,3 +31,5 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 
 # azure cli 
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+## Extensions
+az extension add --name azure-devops
