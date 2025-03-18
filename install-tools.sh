@@ -21,11 +21,6 @@ wget https://github.com/jqlang/jq/releases/download/jq-1.7.1/jq-linux-amd64 -O /
 && chmod +x /usr/bin/jq
 log "jq installed successfully."
 
-# git
-log "Installing git..."
-sudo apt install git -y
-log "git installed successfully."
-
 # docker
 log "Setting up Docker repository..."
 ## Add Docker's official GPG key:
@@ -45,6 +40,11 @@ sudo apt-get update
 log "Installing Docker..."
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
 log "Docker installed successfully."
+
+# git
+log "Installing git..."
+sudo apt install git -y
+log "git installed successfully."
 
 # azure cli 
 log "Installing Azure CLI..."
